@@ -1,11 +1,11 @@
 (function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
         define( [ 'jquery', 'underscore' ], factory );
-    } else {
-        // Browser globals
-        root.doneRendering = factory( root.$, root._ );
-    }
+	} else {
+		// Browser globals
+		root.doneRendering = factory( root.$, root._ );
+	}
 }(this, function ( $, _ ) {
 
 	$.extend(jQuery.expr[':'], {
@@ -16,6 +16,6 @@
 
 	return _.debounce( _.once(function( el ) {
 		$( el ).data('done-rendering', true);
-	}), 1000);
+	}), 2000);
 
 }));
