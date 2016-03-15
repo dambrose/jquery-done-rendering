@@ -16,6 +16,6 @@
 
 	return _.debounce( _.once(function( el ) {
 		$( el ).data('done-rendering', true);
-	}), 2000);
+	}), 3000);
 
 }));
